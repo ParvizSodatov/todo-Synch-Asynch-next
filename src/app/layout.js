@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Button } from '@mui/material'
+import Link from 'next/link'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +23,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+
       >
+        <div className='mt-[30px]'>
+        <Link  href={'/'}>
+        <Button variant='contained'>Synhc</Button>
+        </Link>
+        <Link href={'/asynch'}>
+        <Button variant='contained'>Asynch</Button>
+        </Link>
+
+        </div>
         {children}
       </body>
     </html>
