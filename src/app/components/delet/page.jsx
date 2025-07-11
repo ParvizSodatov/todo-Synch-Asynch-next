@@ -1,3 +1,5 @@
+'use client'
+
 export default function DeletTodo({todos,id,setTodos}){
 
   function handleDelet(){
